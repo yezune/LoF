@@ -1,43 +1,68 @@
-# 형태의 법칙들 Laws of Form
-
-## 1.형태 The form
-
-우리가 구별과 지시의 두 개념을 취한다면, 먼저 구별하지 않고 지시할 수 없다. 그래서 형태를 다루기 위해서는 구별의 형태를 먼저 취한다. 
-
-## 정의
-
-* 구별은 완전한 포함이다.
+# 꼴의법칙들(Laws Of Form)
 
 
+## 1. 그꼴(the form)
 
-We take as given the idea of distinction and idea of indication,  and that we cannot make an indication without drawing a distinction. We take, therefore, the form of distinction for the form.
+우리가 가름과 가리킴을 생각할 때, 가름이 없이 가리킬 수 없다. 그리하여, 그 꼴을 위해 가름의 꼴을 취한다. 
 
-### Definition
+### 정의
 
-*Distinction is perfect continence.[^c1-1]
+*가름은 충만하다. (Distinction is perfect continence.)*
 
-That is to say, a distinction is drawn by arranging a boundary with seperate sides so that a point on one side cannot reach the other side without crossing the boundry. For example, in a plane space a cicle draws a distinction.
+말하자면, 하나의 가름은 테두리를 따라 분리된 양편을 이루어,  한 편의 지점이 그 테두리를 건너지 않고는 다른 편에 닿을 수 없다. 예를 들어, 한 평면 공간에서 하나의 원은 하나의 가름을 이룬다.
 
-Once a distinction is drawn, the spaces, states or contents on each side of the boundry, being distinct, can be indicated.
+한 가름이 이뤄지면,  그 테두리의 양쪽에 있는 공간, 상태 또는 내용은 갈라져서 가리킬 수 있다 .
 
-there can be no distinction without motive, and there can be no motive unless contents are seen to differ in value.
+동기 없는 가름은 있을 수 없고, 그 내용의 값이 다르지 않은 동기는 있을 수 없다.
 
-If a content is of value, a name can be taken to indicate this value. Thus the calling of the name can be identified with the value of the content.
+만약 하나의 내용이 값이면, 한 이름은 이 값을 표시하기 위해 취할 수 있다. 
 
-### Axiom 1. The law of calling
+그래서 그 이름을 부른다는 것은 그 내용의 값을 가지고 구별하는 것이다.   
 
-*The value of a call made again is the value of the call.*
 
-That is to say, if a name is called and then is called again, the value indicated by the two calls taken together is the value indicated by one of them.
-That is to say, for any name, to recall is to call.
-Equally, if the content is of value, a motive or an intention or instruction to cross the boundary into the content can be taken to indicate this value.
-Thus, also, the crossing of the boundry can be identified with the value of the content.
+### 자명한 것 1. 부름의 법칙
 
-### Axion 2. The law of crossing
 
-*the value of a crossing made again is not the value of the crossing.*
+*다시 부름의 값은 한 부름의 값이다.*
 
-That is to say, if it is intended to cross a boundary and then it is intended to cross it again, the value indicated by the two intentions taken together is the value indicated by none of them.
-That is to say, for any boundary, to recross is not to cross.
+말하자면, 한 이름을 한번 부르고 다시 부른다면, 같이 두번 부르기에 의해 지시된 그 값은 그들중의 하나에 의해 표시된 값이다. 
 
-[^c1-1]: There have been so many jokes about this that I had better point out that I was employing "continence" in its original sense of "containment", not in its later usage as "sexual abstinence" -  Author, reviewing this text 2000-06-27
+말하자면, 어떤 이름을 위해, 두번 부르는 것은 한번 부르는 것이다.  
+
+마찬가지로, 내용이 값인 경우에, 이 값을 표시하기 위해 테두리를 넘어 내용으로 들어가는 이유 또는 의도 또는 지시를 취할 수 있다.
+
+그러므로, 또한,  테두리를 넘는 것은 내용의 값을 가지고 구별할 수 있다. 
+
+
+
+### 자명한 것 2. 건넘의 법칙
+
+
+*다시 건넘의 값은 건넘의 값이 아니다.*
+
+말하자면, 그것이 한 테두리를 건너기 위한 의도이고 그런 다음 그것을 다시 건너려는 의도라면, 두 의도들에 의해 함께 지시되는 그 값은 그것들 중 어느것에 의해 표시되는 값도 아니다. 
+
+말하자면, 어떠한 테두리도,  다시 건너기는 건너기가 아니다. 
+
+
+### 역어
+
+Form - 꼴
+
+Distinguish - 가름, 가르다. 또는나눔, 나누다
+
+Indication - 가리킴, 가리키다(indicate), 표시, 표시하다.
+
+Boundary - 테두리
+
+Crossing - 건넘, 
+
+Calling - 부름, 부르는것
+
+Drawing - 이룸, 이루다.
+
+Motive - 동기, 이유
+ 
+Intent, intention - 뜻, 의지(意志), 이루고자함
+
+Instruction - 지시
