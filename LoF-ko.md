@@ -38,7 +38,50 @@
 
 말하자면, 어떤 테두리를 위해, 다시 가로지르는 것은 가로지르기가 아니다.
 
-### 역어
+
+## 2. 그 꼴에서 꺼낸 꼴들
+
+### 구성(Construction)
+
+### 내용(Content)
+
+### 의지(Intent)
+
+### 첫째 규범(First Canon). 의지의 관례(Convention of Intention)
+
+### 지식(Knowledge)
+
+### 꼴(Form)
+
+### 이름(Name)
+
+### 배치(Arrangement)
+
+### 표현(Expression)
+
+### 값(Value)
+
+### 동등(Equivalence)
+
+### 지시(Instruction)
+
+### 등식(Equation)
+
+### 원시 등식(Primitive equation)
+
+### 단순 표현(Simple expression)
+
+### 운영(Operation)
+
+### 관계(Relation)
+
+### 깊이(Depth)
+
+### 쓰여지지 않은 가로지르기(Unwritten cross)
+
+### 퍼지는 공간(Pervasive space)
+
+# 부록 1. 역어
 
 Form - 꼴
 
