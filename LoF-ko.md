@@ -1,5 +1,3 @@
-# 꼴의 법칙들(Laws Of Form)
-
 # Table of contents
 
 - [꼴의 법칙들(Laws Of Form)](#-laws-of-form)
@@ -30,6 +28,8 @@
     - [퍼지는 공간(Pervasive space)](#-pervasive-space)
 - [부록 1. 역어](#-1-)
 
+
+# 꼴의 법칙들(Laws Of Form)
 
 ## 1. 그 꼴(the form)
 
