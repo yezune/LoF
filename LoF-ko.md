@@ -1,5 +1,3 @@
-# Table of contents
-
 # 꼴의 법칙들(Laws Of Form)
 
 ## 1. 그 꼴(the form)
