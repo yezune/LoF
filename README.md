@@ -1,3 +1,3 @@
 # Laws of Form
 
-A repositoryof the LoF.
+A repository of the LoF.
