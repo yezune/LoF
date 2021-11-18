@@ -1,4 +1,24 @@
 \documentclass[11pt, a4paper]{book}
+\usepackage{amsmath}
+
+\newcommand\lcall[2][0]{%
+    \hbox{%
+        \vbox{
+            \hrule
+            \kern \dimexpr 2pt + #1\dimexpr 2.7pt\relax\relax
+            \hbox{$#2$\,\footnotesize\strut}
+        }%
+        {\vrule depth 1pt}}\mskip7mu
+}
+\newcommand\lcross[2][0]{%
+    \hbox{%
+        \vbox{
+            \hrule
+            \kern \dimexpr 2pt + #1\dimexpr 2.7pt\relax\relax
+            \hbox{$#2$\,\footnotesize\strut}
+        }%
+        {\vrule depth 1pt}}\mskip1mu
+}
 
 \title{LAWS OF FORM}
 \author{GEORGE SPENCER-BROWN}
@@ -7,5 +27,14 @@
 \bibstyle{}
 \begin{document}
 \maketitle
+
+\begin{align*}
+     & \lcall{\lcalling{a}b}                               \\[0.5ex] 
+     & = \lcall{\lcall{a}b}\lcall{\lcall{a}b} \\[0.5ex] 
+     & = \lcall{\lcall{a}\lcross{\lcross{b}}}\lcall[1]{\lcall{a}b} \\[0.5ex] 
+     & = \lcall{\lcall{\lcall{\lcall{a}b}a}\lcross{\lcall{\lcall{a}b}\lcross{b}}} \\[0.5ex]
+     & = \lcall{\lcall{\lcall{\lcall{a}b}a}\lcross{\lcross{b}}}  \\[0.5ex]
+     & = \lcall{\lcall{\lcall{\lcall{a}b}a}b}
+\end{align*}
 
 \end{document}
