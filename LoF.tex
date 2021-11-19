@@ -1,6 +1,26 @@
 \documentclass[11pt, a4paper]{book}
 
+\usepackage[utf8]{inputenc}
+
 \usepackage{gsb}
+\usepackage{import}
+\usepackage{kotex}
+
+
+% Fonts
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%% 영문 폰트
+% \setmainfont{TeX Gyre Termes}
+% \setromanfont{Times New Roman}
+% \setsansfont{Arial}
+% \setmonofont{Courier New}
+% \setmainfont{Arial}
+%% 한글 폰트
+% \setmainhangulfont{NanumMyeongjo} % NanumMyeongjo
+% \setsanshangulfont{맑은 고딕}     % MalgunGothic
+% \setmonohangulfont{D2Coding}
+
 
 \title{LAWS OF FORM}
 \author{GEORGE SPENCER-BROWN}
@@ -13,25 +33,52 @@
 %-------------------
 
 \begin{document}
-
+\newpage
 \maketitle
+
+\tableofcontents
+
+\newpage
+\addcontentsline{toc}{section}{Preface}
+\section*{Preface}
+서문 한글 출력 테스트
+
+\newpage
+\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction}
+
+\newpage
+\addcontentsline{toc}{section}{A note on mathematical approach}
+\section*{A note on mathematical approach}
+
+\newpage
+\section{The form}
+
+\newpage
+\section{Forms taken out of the form}
+
+\newpage
+\section{The conception of calculation}
+
+\newpage
+\section{The primary arithmetic}
 
 \begin{form}
 	f = \lof{
+		\lof{
 			\lof{
-				\lof{
-					\loflr{
+				\loflr{
+					\lof{
 						\lof{
 							\lof{
-								\lof{
-									\loflr{\re{8}}{a}{}{1}\re{6}
-									}{2}\re{1}
-								}{3}\re{8}
-							}{4}
-						}{a}{}{5}\re{2}
-					}{6}\re{5}
-				}{7}\re{4}
-			}{8}
+								\loflr{\re{8}}{a}{}{1}\re{6}
+							}{2}\re{1}
+						}{3}\re{8}
+					}{4}
+				}{a}{}{5}\re{2}
+			}{6}\re{5}
+		}{7}\re{4}
+	}{8}
 \end{form}
 
 \begin{form}
@@ -41,17 +88,17 @@
 \begin{form}
 	f = \loflr{}{a}{}{1} \loftext{b}{2} \re{1}
 \end{form}
-	
+
 \begin{form}
-f = \lofc{}{}{1}
+	f = \lofc{}{}{1}
 \end{form}
-	
+
 \begin{form}
 	f = \lofc{}{a}{1}
 \end{form}
-	
+
 \begin{form}
-f = \lofc{
+	f = \lofc{
 		\re{1}
 		\loftext{a}{2}
 		\re{1}
@@ -74,26 +121,56 @@ f = \lofc{
 \end{form}
 
 \begin{form}
-\lof{
-	\re{3}
-	\loflr{}{a}{}{1}
-	\loflr{}{b}{}{2}
-}{3}
-\loftext{c}{4}
-\re{2}
+	\lof{
+		\re{3}
+		\loflr{}{a}{}{1}
+		\loflr{}{b}{}{2}
+	}{3}
+	\loftext{c}{4}
+	\re{2}
 \end{form}
 
 \begin{form}
 	\text{ Kultur } = \lofc{\ren{Problem}{2} \lofc{\re{1}}{\text{ x }}{1}}{\text{ Medium }}{2}
 \end{form}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-aliqua. Ut enim ad minim veniam, quis nostrud exercitation \begin{forminline}
+The test of inline LoF equation \begin{forminline}
 	h_6 = \lofc{\lofc{\lofc{\lofc{\lofc{\lofc{}{h_8}{1}}{h_6}{2}}{h_1}{3}}{h_8}{4}}{a}{5}}{h_2}{6}
-\end{forminline} ullamco laboris laborum. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-reprehenderit in voluptate velit \begin{forminline}
+\end{forminline} The test two \begin{forminline}
 	f = \lofc{\lofc{\lofc{\re{2}}{a}{1}\re{3}}{b}{2}}{c}{3}
-\end{forminline} esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-proident, sunt in culpa qui officia deserunt mollit anim id est
+\end{forminline} End of the test.
 
-\end{document}exit
+\newpage
+\section{A calculus taken out of the calculus}
+
+\newpage
+\section{The primary algebra}
+
+\newpage
+\section{Theorems of the second order}
+
+\newpage
+\section{Re-uniting the two orders}
+
+\newpage
+\section{Completeness}
+
+\newpage
+\section{Independence}
+
+\newpage
+\section{Equations of the second degree}
+
+\newpage
+\section{Re-entry into the form}
+
+\newpage
+\section*{Notes}
+
+\newpage
+\appendix
+\section{Proofs of Sheffer's postulates}
+\section{The calculus interpreted for logic}
+
+
+\end{document}
