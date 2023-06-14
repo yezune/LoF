@@ -1,105 +1,355 @@
-\documentclass[11pt, a4paper]{book}
-
+\documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
-
+\usepackage[T1]{fontenc}     
+\usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{gsb}
-\usepackage{import}
-\usepackage{kotex}
+% \usepackage{kotex}
+
+%\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{axiom}{Axiom}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
 
 
-% Fonts
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
 
-%% 영문 폰트
-% \setmainfont{TeX Gyre Termes}
-% \setromanfont{Times New Roman}
-% \setsansfont{Arial}
-% \setmonofont{Courier New}
-% \setmainfont{Arial}
-
-%% 한글 폰트
-% \setmainhangulfont{NanumMyeongjo} % NanumMyeongjo
-% \setsanshangulfont{맑은 고딕}     % MalgunGothic
-% \setmonohangulfont{D2Coding}
-
-
-\title{LAWS OF FORM}
-\author{GEORGE SPENCER-BROWN}
-\citation{}
-\bibdata{}
-\bibstyle{}
-
-%-------------------
-% start document
-%-------------------
+\title{Laws of Form}
+\author{George Spencer-Brown}
+\date{1972}
 
 \begin{document}
 \newpage
 \maketitle
 
+\newpage
+\addcontentsline{toc}{section}{Preface}
 \tableofcontents
 
 \newpage
-\addcontentsline{toc}{section}{Preface}
-\section*{Preface}
-서문 한글 출력 테스트
+\section*{A note on the mathematical approach}
+
+The  theme   of  this  book  is  that  a  universe  comes  into  being  when  a  space  is  severed  or  taken  apart.  The  skin  of  a  living  organism  cuts  off  an  outside  from  an  inside.  So  does  the  circumference  of a circle in a plane. By tracing the way we represent such  a  severance,  we can  begin to  reconstruct,  with  an  accuracy  and   coverage  that   appear   almost   uncanny,   the   basic   forms   underlying   linguistic,  mathematical,   physical,   and   biological   science, and  can  begin  to  see how  the  familiar  laws  of  our  own  experience  follow  inexorably  from  the  original  act  of  severance.  The  act  is  itself  already  remembered,   even  if   unconsciously,   as  our  first  attempt  to  distinguish  different  things  in  a  world  where, in the  first  place, the boundaries  can  be drawn  anywhere  we  please.  At  this  stage  the  universe  cannot  be  distinguished  from  how  we  act upon  it,  and  the  world  may  seem  like  shifting  sand  beneath  our  feet.
+
+Although   all  forms,   and   thus   all   universes,  are   possible,   and  any  particular  form   is  mutable,  it  becomes  evident   that   the  laws  relating  such  forms  are  the  same  in  any  universe.  It  is  this  sameness,  the  idea  that  we  can  find  a  reality  which  is  independent  of  how  the  universe  actually  appears,  that  lends  such fascination  to the study  of mathematics. That  mathematics,  in  common  with  other  art  forms,  can  lead  us  beyond  ordinary  existence, and  can  show  us  something  of the  structure  in  which  all  creation  hangs  together,  is  no  new  idea.  But  mathematical  texts generally  begin the  story  somewhere  in the  middle,  leaving  the  reader  to  pick  up  the  thread  as  best  he  can.  Here  the  story  is traced  from  the  beginning. \\
+
+Unlike   more   superficial   forms   of   expertise,   mathematics   is  a way  of  saying  less and  less about  more  and  more.  A  mathematical  text  is  thus  not  an  end  in  itself,  but  a  key  to  a  world  beyond  the  compass  of  ordinary  description. \\ 
+
+An  initial  exploration  of  such  a  world  is  usually  undertaken  in the company  of an  experienced  guide. To  undertake  it  alone, although  possible,  is perhaps as  difficult  as to enter  the world  of  music  by  attempting,  without  personal  guidance,  to  read  the  score-sheets  of  a master  composer,  or  to  set  out  on  a  first  solo  flight  in  an  aeroplane  with  no  other  preparation  than  a  study  of  the  pilots'  manual. \\
+
+Although  the  notes  at  the  end  of the  text  may  to  some  extent  make  up for, they cannot effectively replace,   such   personal   guidance.  They  are  designed  to  be  read  in  conjunction  with  the  text,  and  it  may  in  fact  be  helpful  to  read  them  first. \\
+
+The  reader  who  is  already  familiar  with  logic,  in  either  its  traditional   or  its  symbolic  form,   may  do   well  to   begin   with   Appendix  2,  referring  through  the  Index  of  Forms  to  the  text  whenever  necessary.  \\
+
 
 \newpage
-\addcontentsline{toc}{section}{Introduction}
+\section*{Preface to the first American edition}
+
+Apart   from   the   standard   university   logic   problems,   which   the  calculus published  in  this  text  renders  so  easy  that  we  need  not   trouble   ourselves   further   with   them,   perhaps   the   most   significant  thing,  from  the  mathematical  angle,  that  it  enables  us  to  do  is to  use  complex  values  in  the  algebra  of  logic.  They  are  the   analogs,   in  ordinary   algebra,   to   complex   numbers   $a +b \sqrt{-1}$.   My  brother  and  I  had  been  using  their  Boolean  counterparts  in  practical  engineering  for  several  years   before   realizing what  they were.  Of  course,  being  what  they  are,  they  work  perfectly   well,  but  understandably   we  felt   a  bit   guilty   about  using them,  just  as the  first mathematicians  to  use  'square  roots  of  negative  numbers'  had   felt  guilty,  because  they   too   could  see  no  plausible  way  of  giving  them   a  respectable  academic  meaning.  All  the  same,  we  were  quite  sure  there  was  a  perfectly   good   theory   that  would   support   them,   if  only   we   could  think  of  it.\\
+
+The  position   is  simply  this.  In  ordinary   algebra,   complex   values  are  accepted  as  a  matter  of  course,  and  the  more  advanced   techniques   would   be   impossible   without   them.    In    Boolean  algebra  (and  thus,  for  example,  in  all  our  reasoning  processes)   we  disallow   them.   Whitehead   and   Russell   introduced  a  special  rule,  which  they  called  the  Theory  of  Types,  expressly  to  do  so.  Mistakenly,  as  it  now  turns  out.  So,  in  this  field,  the  more  advanced  techniques,  although  not  impossible,  simply  don't   yet  exist.  At  the  present   moment  we   are   constrained,  in  our  reasoning  processes,  to  do  it  the  way  it  was  done  in  Aristotle's  day.  The  poet  Blake  might  have  had  some  insight  into  this,  for  in  1788  he  wrote  that  'reason,  or  the  ratio  of  all  we  have  already  known,  is  not  the  same  that  it  shall  be  when  we  know  more.'\\
+
+Recalling  Russell's  connexion  with  the  Theory  of  Types,  it was  with  some  trepidation   that   I  approached   him   in   1967   with  the  proof  that  it  was  unnecessary.  To  my  relief   he  was  delighted.  The  Theory  was,  he  said,  the  most  arbitrary  thing  he  and  Whitehead  had  ever  had  to  do,  not  really  a  theory  but  a  stopgap,  and  he  was  glad  to  have  lived  long  enough  to  see  the  matter  resolved.\\
+
+Put  as  simply  as  I  can  make  it,  the  resolution  is  as  follows.  All  we  have  to  show  is that  the  self-referential  paradoxes,  discarded  with  the  Theory  of  Types,  are  no  worse  than   similar   self-referential   paradoxes,  which  are  considered  quite  acceptable,  in  the  ordinary  theory  of  equations.\\
+
+The  most  famous  such  paradox  in  logic  is  in  the  statement,  
+'This  statement  is  false.'  \\
+
+Suppose  we  assume  that  a  statement  falls  into  one  of  three  categories,  true,  false,  or  meaningless,  and  that  a  meaningful  statement  that  is  not  true  must  be  false,  and  one  that  is  not  false   must  be  true.  The  statement   under   consideration   does   not  appear  to be meaningless  (some  philosophers  have  claimed  that  it  is,  but  it  is  easy  to  refute  this),  so  it  must  be  true  or  false.  If  it  is true,  it  must  be,  as  it  says,  false.  But  if  it  is  false,  since  this  is what  it  says,  it  must  be  true.\\
+
+It  has  not  hitherto  been  noticed   that   we  have   an   equally   vicious  paradox  in  ordinary  equation  theory,  because  we  have  carefully  guarded  ourselves  against  expressing  it  this  way.  Let  us  now  do  so.  \\
+
+We  will  make  assumptions  analogous  to  those  above.  We  assume  that  a number  can  be  either  positive,  negative,  or  zero.  We  assume  further  that  a  nonzero  number  that  is  not  positive  must  be  negative,  and  one  that  is  not  negative  must  be  positive.  We  now  consider  the  equation 
+\begin{align*}
+    x^2+1 &= 0.
+\end{align*}
+Transposing, we have
+\begin{align*}
+    x^2 &= -1,
+\end{align*}
+and  dividing  both  sides by  $x$  gives 
+\begin{align*}
+    x &= \frac{-1}{x}
+\end{align*}
+We  can  see that  this  (like  the  analogous  statement  in  logic)  is  self-referential:  the  root-value  of  $x$  that  we  seek  must  be  put  back  into  the  expression  from  which  we  seek  it.  \\
+
+Mere  inspection  shows  us  that  x must  be  a  form  of  unity,  or  the equation  would not  balance  numerically.  We  have  assumed  only  two  forms  of  unity,  $+1$  and  $-1$,  so we  may  now  try  them  each  in  turn.  Set  $x=+1$. This  gives 
+\begin{align*}
+    +1 &= \frac{-1}{+1} = -1
+\end{align*}
+which  is clearly  paradoxical.  So  set  $x=-1$.  This  time  we  have 
+\begin{align*}
+    -1 &= \frac{-1}{-1} = +1
+\end{align*}
+and  it  is  equally  paradoxical.  \\
+
+Of  course,  as  everybody  knows,  the  paradox  in  this  case  is  resolved  by introducing  a fourth  class  of  number,  called   \textit{imaginary},   so  that  we  can  say  the  roots  of  the  equation  above  are  ±$i$, where $i$ is  a new  kind  of unity  that  consists  of  a  square  root  of  minus  one.  \\
+
+What  we  do  in  Chapter  11  is extend  the  concept  to  Boolean  algebras,  which  means  that  a  valid  argument  may  contain  not  just  three  classes  of  statement,  but  four:  true,  false,  meaningless,  and  imaginary.  The  implications  of  this,  in  the  fields  of  logic,   philosophy,   mathematics,   and   even   physics,   are   profound. \\
+
+What   is  fascinating   about   the  imaginary   Boolean   values,   once  we  admit  them,  is  the  light  they  apparently  shed  on  our  concepts  of  matter  and  time.  It  is,  I  guess,  in  the  nature  of  us  all  to  wonder  why  the  universe  appears  just  the  way  it  does.  Why,  for  example,  does  it not  appear  more  symmetrical?  Well, if  you  will  be  kind  enough,  and  patient  enough,  to  bear  with  me  through  the  argument  as  it  develops  itself  in  this  text,  you  will  I  think  see,  even  though  we  begin  it  as  symmetrically  as  we  know  how,  that  it becomes,  of  its own  accord,  less  and  less  so  as  we  proceed.\\
+\\
+G SPENCER-BROWN \\
+Cambridge, England \\
+Maundy Thursday 1972   
+
+
+\newpage
+\section*{Preface}
+
+The  exploration  on  which  this  work  rests  was  begun  towards  the  end  of  1959. The  subsequent  record  of  it  owes  much,  in  its  early stages,  to   the   friendship   and   encouragement   of   Lord   Russell,  who  was  one  of  the  few  men  at  the  beginning  who  could  see  a  value  in  what  I  proposed  to  do.  It  owes  equally,  at  a  later  stage,  to  the  generous  help  of  Dr J C P Miller,  Fellow  of   University   College   and   Lecturer   in   Mathematics   in   the   University  of  Cambridge,  who  not  only  read  the  successive  sets  of  printer's  proofs,  but  also  acted  as  an  ever-available  mentor  and  guide,  and  made  many  suggestions  to  improve  the  style  and  accuracy  of  both  text  and  context.  \\
+
+In 1963 I accepted an invitation of Mr H G Frost, Staff Lecturer in Physical Sciences in the Department of Extra-mural Studies in the University of London,  to give  a course  of  lectures  on  the mathematics  of logic. The  course  was later  extended  and  repeated   annually   at   the   Institute   of   Computer Science in Gordon Square, and  from  it  sprang  some  of  the  context  in  the  notes  and  appendices  of  this  essay.  I  was  also  enabled,  through  the  help  of  successive  classes  of  pupils,  to  extend  and  sharpen  the  text.\\
+
+Others  helped,  but  cannot,  alas,  all  be  mentioned.  Of  these  the  publishers  (including  their  readers and  their  technical  artist)  were  particularly  cooperative,  as  were  the  printers,  and,  before  this,  Mrs Peter Bragg  undertook  the  exacting  task  of  preparing  a  typescript.  Finally  I  should  mention  the  fact  that  an  original  impetus   to   the   work   came   from   Mr I V Idelson,   General   Manager   of  Simon-MEL   Distribution   Engineering,  the  techniques  here  recorded   being  first   developed   not   in  respect   of   questions  of  logic,  but  in  response  to certain  unsolved  problems  in  engineering. \\
+
+Richmond, August 1968 \\
+
+Acknowledgment \\
+
+The author and publishers  acknowledge  the  kind  permission of Mr J Lust, of the University of London School of Oriental and African  Studies, to  photograph part of a facsimile copy of the 12th century Fukien print of the Tao Te Ching in the old Palace Museum, Peking. 
+
+\newpage
 \section*{Introduction}
 
-\newpage
-\addcontentsline{toc}{section}{A note on mathematical approach}
-\section*{A note on mathematical approach}
+A   principal   intention   of  this   essay   is  to   separate   what   are   known  as  algebras  of  logic  from  the  subject  of  logic,  and  to  re-align  them  with  mathematics.\\
+
+Such  algebras,  commonly  called  Boolean,  appear  mysterious  because  accounts  of  their  properties  at  present  reveal  nothing  of   any   mathematical   interest   about   their  arithmetics.   Every   algebra  has  an  arithmetic,  but  Boole  designed\footnote{George  Boole,  The  mathematical     analysis   of  logic,   Cambridge,  1847.}  his  algebra  to  fit  logic,  which  is  a  possible  interpretation  of  it,  and  certainly  not  its  arithmetic.  Later  authors  have,  in  this  respect,  copied  Boole,  with  the  result  that  nobody  hitherto  appears  to   have   made any sustained attempt to elucidate and to study the primary, non-numerical  arithmetic  of  the  algebra  in  everyday  use  which  now  bears  Boole's  name.\\
+
+When  I  first  began,  some  seven  years  ago,  to  see  that  such  a   study   was   needed,   I   thus   found   myself   upon   what   was,   mathematically  speaking,  untrodden  ground.  I  had  to  explore  it  inwards  to  discover  the  missing  principles.  They  are  of  great  depth  and  beauty,  as  we  shall  presently  see.\\
+
+In  recording  this  account   of  them,   I  have  aimed  to   write   so  that  every  special  term  shall  be  either  defined  or  made  clear  by  its  context.  I  have  assumed  on  the  part  of  the  reader  no  more  than  a  knowledge  of  the  English  language,  of  counting,  and  of how  numbers  are commonly  represented.  I have  allowed  myself  the  liberty  of  writing  somewhat  more  technically  in  this  introduction  and  in  the  notes  and  appendices  which  follow  the  text,  but  even  here,  since  the  subject  is  of  such  general  interest,  I  have  endeavoured,  where possible,  to  keep the account  within  the  reach  of  a  non-specialist.\\
+
+Accounts  of  Boolean  algebras  have  up  to  now  been  based  on  sets  of  postulates.  We  may  take  a  postulate  to  be  a  statement which is accepted without evidence, because it belongs to  a set of such  statements  from  which  it  is  possible  to  derive  other  statements  which  it  happens  to  be  convenient  to  believe.  The  chief  characteristic which has always marked  such statements has  been  an  almost  total  lack  of  any  spontaneous  appearance  of  truth\footnote{Cf Alfred North Whitehead and Bertrand Russell, Principia mathematica, Vol. I, 2nd edition,  Cambridge, 1927, p v.}.  Nobody  pretends,  for   example,  that  Sheifer's  equations\footnote{Henry  Maurice  Sheffer, Trans. Amer.   Math.Soc, 14 (1913) 481-8.}   are   mathematically  evident, for  their  evidence  is not  apparent  apart  from  the usefulness  of equations which follow from  them.  But in the primary  arithmetic  developed  in  this  essay,  the  initial  equations can be seen to  represent two very  simple  laws  of  indication  which,  whatever  our  views  on  the  nature  of  their  self-evidence,  at   least  recommend   themselves   to   the   findings   of   common   sense.  I  am  thus  able  to  present  (Appendix  1), apparently   for   the  first  time,  proofs  of  each  of  Sheffer's  postulates,  and  hence  of   all   Boolean   postulates,   as  theorems   about   an   axiomatic   system  which  is  seen  to  rest  on  the  fundamental   ground   of   mathematics.\\
+
+Working  outwards  from  this fundamental  source, the  general  form   of  mathematical   communication,   as   we  understand   it   today,  tends  to  grow  quite naturally  under  the hand  that  writes  it. We  have  a  definite  system,  we name  its parts,  and  we  adopt,  in  many   cases,   a  single  symbol   to  represent  each  name.   In   doing  this,  forms  of  expression  are  called  inevitably  out  of  the  need  for  them,  and  the  proofs  of  theorems,  which  are  at   first   seen  to  be  little  more  than  a  relatively  informal   direction   of   attention  to  the  complete  range  of  possibilities,  become  more  and   more   recognizably   indirect   and   formal   as   we   proceed   from  our  original conception.  At the half-way  point the  algebra,  in  all  its  representative  completeness,  is  found  to  have  grown  imperceptibly  out  of  the arithmetic,  so that  by the time  we  have  started  to  work  in  it  we  are  already  fully  acquainted  with  its  formalities  and  possibilities  without  anywhere  having  set  out  with  the  intention  of  describing  them  as  such, \\
+
+One  of  the  merits  of  this  form  of  presentation  is the  gradual  building  up  of  mathematical  notions  and  common  forms   of   procedure  without  any  apparent  break  from   common   sense. \\
+
+The  discipline  of  mathematics  is  seen  to  be  a  way,   powerful   in comparison  with  others,  of  revealing  our  internal  knowledge  of  the  structure  of  the  world,  and  only  by  the  way  associated  with  our  common  ability  to  reason  and  compute.
+\\
+Even so, the orderly development  of  mathematical conventions and formulations  stage  by  stage  has  not  been  without  its  problems   on   the reverse side. A person with  mathematical   training,  who  may  automatically use a whole range  of  techniques  without   questioning   their origin, can find   himself in difficulties over  an  early  part  of  the  presentation,  in  which  it  has  been  necessary  to  develop  an  idea using  only  such  mathematical  tools as have  already  been  identified.  In  some  of  these  cases  we  need  to  derive  a  concept  for  which  the  procedures  and  techniques  already developed  are  only just  adequate.  The  argument,  which  is maximally  elegant  at  such  a  point,  may  thus  be  conceptually difficult  to  follow.\\
+
+One such case, occurring  in Chapter 2, is the derivation  of  the  second  of  the  two  primitive  equations  of the  calculus  of  indications. There  seems to be such universal  difficulty  in following  the  argument  at  this  point,  that  I  have  restated  it  less  elegantly  in  the  notes  on  this  chapter  at  the  end  of  the  text.  When   this   is  done,  the  argument  is  seen  to  be  so  simple  as  to  be'almost  mathematically  trivial. But  it must  be remembered  that,  according  to  the  rigorous  procedure  of  the  text,  no  principle  may  be  used  until  it  has  been  either  called  into  being  or  justified   in   terms  of  other  principles  already  adopted.  In  this   particular   instance,  we  make  the  argument  easy  by  using  ordinary  substitution.  But  at  the  stage  in  the  essay  where  it  becomes  necessary  to  formulate  the  second  primitive  equation,  no  principle  of  substitution  has  yet  been  called  into  being,  since  its  use  and  justification,  which  we  find  later  in  the  essay  itself,  depends  in  part upon the existence of the very equation we want to  establish.\\
+
+In  Appendix  2,1 give a brief account  of some of the  simplifications  which  can  be  made  through  using  the  primary   algebra   as  an  algebra   of  logic.  For   example,  there  are  no   primitive   propositions.  This   is  because  we  have   a  basic  freedom,   not   granted  to  other  algebras  of  logic,  of  access  to  the  arithmetic  whenever  we please.  Thus  each  of Whitehead  and  Russell's  five  primitive implications  [2, pp 96-7] can be equated  mathematically with  a  single  constant.  The  constant,  if  it  were  a  proposition,  would  be the primitive implication. But in fact, being arithmetical, it  cannot  represent  a  proposition. \\
+
+A  point  of  interest  in  this  connexion  is  the  development  of  the  idea  of  a  variable  solely from  that  of the  operative  constant.  This   comes   from   the   fact   that   the   algebra   represents   our   ability to consider the form  of an arithmetical  equation  irrespective  of  the  appearance,  or  otherwise,  of  this  constant  in  certain  specified  places.  And  since,  in  the  primary  arithmetic,  we  are  not  presented,  apparently,  with  two  kinds  of  constant,  such  as  5,  6, etc  and  +,  x,  etc,  but  with  expressions  made  up,  apparently,   of   similar  constants   each  with   a   single  property,   the   conception  of  a  variable  comes  from  considering  the  irrelevant  presence  or  absence  of  this  property.  This  lends  support  to  the  view,  suggested\footnote{Ludwig  Wittgenstein, Tractatus logico-philosophicus, London, 1922, propositions 5 sq.}  by  Wittgenstein,  that  variables  in  the  calculus  of  propositions  do  not  in  fact   represent   the  propositions   in   an expression, but only the truth-functions  of these propositions, since  the  propositions  themselves  cannot  be  equated  with  the  mere   presence   or   absence   of   a   given   property,   while   the   possibility  of  their  being  true  or  not  true  can. \\
+
+Another  point  of  interest  is  the  clear  distinction,  with  the  primary  algebra  and  its  arithmetic,  that  can  be  drawn  between  the proof  of  a theorem  and the demonstration  of  a  consequence.  The  concepts  of  theorem  and  consequence,  and  hence  of  proof  and  demonstration,   are  widely  confused   in  current  literature,  where the words are used interchangeably. This has  undoubtedly  created  spurious  difficulties.  As  will  be  seen  in  the  statement  of  the  completeness  of  the  primary  algebra  (theorem   17),  what  is  to  be  proved  becomes  strikingly  clear  when  the  distinction   is   properly  maintained.  (A  similar  confusion  is  apparent,  especially  in the  literature  of  symbolic  logic,  of the  concepts  of  axiom  and  postulate.)\\
+
+It   is  possible  to   develop  the  primary  algebra   to   such   an   extent  that  it  can  be  used  as  a  restricted  (or  even  as  a   full)   algebra  of  numbers.  There  are  several  ways  of  doing  this,  the  most  convenient  of  which  I  have  found  is to  limit  condensation in the arithmetic, and  thus to  use  a number  of crosses in  a  given  space to represent either the corresponding  number  or its image. When  this  is  done  it  is  possible  to  see  plainly  some  at  least  of  the  evidence  for  Gödel's  and  Church's  theorems\footnote{ Kurt Gödel, Monatshefte  
+ für Mathematik und Physik, 38 (1931) 172-98.}\footnote{Alonzo Church, j. Symbolic Logic, 1 (1936) 40-1, 101-2.}  of  decision.  But  with  the  rehabilitation  of  the  paradoxical  equations  undertaken   in  Chapter   11,  the  meaning  and   application   of   these   theorems  now  stands  in  need  of  review.  They  certainly  appear  less  destructive  than  was  hitherto  supposed. \\
+
+I  aimed  in  the  text  to  carry  the  development  only  so  far  as  to  be able to  consider  reasonably  fully  all the forms  that  emerge  at  each  stage. Although  I  indicate  the  expansion  into  complex  forms  in  Chapter   11, I  otherwise  try  to  limit  the  development  so  as  to  render  the  account,  as  far  as  it  goes,  complete. \\
+
+Most  of  the  theorems  are  original,  at  least  as  theorems,  and  their   proofs   therefore   new.   But  some   of   the  later   algebraic   and  mixed  theorems,  occurring  in  what  is at  this  stage  familiar  ground,   are  already   known   and   have,  in  other   forms,   been   proved  before.  In  all  of these  cases  I have been  able to  find  what  seem  to  be  clearer,  simpler,  or  more  direct  proofs,  and  in  most  cases  the  theorems  I  prove  are  more  general.  For  example,  the  nearest  approach  to  my  theorem   16  seems  to  be  a  weaker  and  less  central  theorem  apparently  first  proved\footnote{W V Quine, j. Symbolic Logic, 3 (1938) 37-40.}  by  Quine,  as   a   lemma  to   a  completeness  proof for a propositional calculus. It was only after contemplating  this theorem  for  some two  years  that  I  found  the  beautiful  key  by  which  it  is  seen  to  be  true  for  all  possible  algebras,  Boolean  or  otherwise. \\
+
+In  arriving  at proofs,  I have often  been  struck  by the  apparent  alignment   of   mathematics   with   psycho-analytic   theory.   In   each  discipline  we  attempt  to  find  out,  by  a  mixture  of  contemplation,   symbolic   representation,   communion,   and   communication,  what  it  is  we  already  know.  In  mathematics,  as  in  other  forms  of  self-analysis,  we  do  not  have  to  go  exploring  the  physical  world  to  find  what  we  are  looking  for.  Any  child  of ten, who can multiply and  divide, already knows, for  example, that  the  sequence  of  prime  numbers  is endless.  But  if he  is not shown  Euclid's  proof,  it  is  unlikely  that  he  will  ever  find  out,  before  he  dies, that  he  knows. \\
+
+This  analogy   suggests  that  we  have  a  direct  awareness  of  mathematical  form  as an  archetypal  structure.  I  try in the  final  chapter  to  illustrate  the  nature  of  this  awareness.  In  any  case,  questions  of  pure  probability  alone  would  lead  us  to  suppose  that   some  degree  of  direct   awareness   is  present   throughout   mathematics. \\
+
+We  may  take  it  that  the  number  of  statements  which  might  or  might  not  be  provable  is  unlimited,  and  it  is  evident  that,  in  any  large  enough  finite  sample,  untrue  statements,  of  those  bearing  any  useful   degree  of  significance,  heavily   outnumber   true   statements.  Thus   in  principle,   if   there   were  no   innate   sense  of  Tightness,  a  mathematician  would  attempt  to  prove  more  false  statements  than true  ones.  But in practice  he  seldom  attempts  to prove  any statement  unless  he  is already  convinced  of  its truth.  And  since  he has not  yet  proved  it, his  conviction  must  arise,  in  the  first  place,  from  considerations  other   than   proof. \\
+
+Thus  the  codification  of  a  proof  procedure,  or  of  any  other  directive  process,  although  at  first  useful,  can  later  stand  as  a  threat  to  further  progress.  For  example,  we  may  consider  the  largely  unconscious, but now codified,  limitation  of the  reasoning  (as  distinct  from  the computative)  parts  of proof  structures  to  the  solution  of  Boolean  equations   of  the  first  degree.  As  we  see in  Chapter  11, and  in the  notes  thereto,  the  solution  of  equations  of  higher  degree  is  not  only  possible,  but  has  been  undertaken  by switching  engineers  on  an  ad hoc basis  for  some  half   a  century  or  more.   Such  equations   have  hitherto   been   excluded  from  the subject  matter  of ordinary  logic by the White-head-Russell  theory  of types  [2, pp  37 sq, e.g. p 77].\\
+
+I  show  in the text  that  we can  construct  an  implicit  function  of  itself  so that  it re-enters  its own space  at  either  an odd or an even  depth.  In  the  former  case  we  find  the possibility  of  a  self-denying  equation  of  the  kind  these  authors  describe.  In  such  a  case,  the  roots  of  the  equation  so  set  up  are  imaginary.  But  in  the  latter  case  we  find  a  self-confirming  equation  which  is satisfied,  for  some  given configuration  of  the  variables,  by  two  real  roots. \\
+
+I  am  able,  by  this  consideration,  to  rehabilitate\footnote{For a history of the earlier essays to rehabilitate, on a logical rather than on a mathematical basis, something of what was discarded, see Abraham A Fraenkel and Yehoshua Bar-Hillel, Foundations of set theory, Amsterdam, 1958, pp 136-95.}  the  formal  structure  hitherto  discarded  with  the  theory  of  types.  As  we  now  see,  the  structure  can  be  identified   in  the  more   general   theory  of  equations, behind  which  there  already  exists  a  weight  of  mathematical  experience. \\
+
+One  prospect   of  such  a  rehabilitation,   which  could   repay   further  attention,  comes  from  the  fact  that,  although  Boolean  equations  of  the  first  degree can  be  fully  represented  on  a  plane  surface,  those  of  the  second  degree  cannot  be  so  represented.  In  general,  an  equation  of  degree  k  requires,  for  its  representation,  a  surface  of  genus  k — 1.  D J Spencer-Brown  and  I  found  evidence, in unpublished  work  undertaken  in  1962-5, suggesting that  both  the  four-colour  theorem  and  Goldbach's  theorem  are  undecidable with a proof structure confined to Boolean equations of  the  first  degree,  but  decidable  if  we  are  prepared  to  avail  ourselves  of  equations  of  higher  degree. \\
+
+One  of  the  motives  prompting  the  furtherance  of  the  present  work  was the hope  of bringing together the  investigations  of  the  inner  structure  of  our  knowledge  of  the  universe,  as  expressed  in   the   mathematical   sciences,   and   the   investigations   of   its   outer  structure,  as  expressed  in  the  physical  sciences.  Here  the  work  of  Einstein,  Schrodinger,  and  others  seems  to  have  led  to the realization  of an ultimate boundary  of physical  knowledge  in  the  form   of  the  media  through  which   we  perceive   it.   It   becomes   apparent   that   if   certain   facts   about   our   common   experience   of  perception,   or  what   we  might   call   the   inside   world,  can  be  revealed  by  an  extended  study  of  what  we  call,  in  contrast,  the  outside  world,  then  an  equally  extended  study  of  this  inside  world  will  reveal,  in  turn,  the  facts  first  met  with  in the world  outside: for  what  we approach,  in either  case,  from  one  side  or  the  other,  is  the  common  boundary  between  them. \\
+
+I  do  not  pretend  to  have  carried  these  revelations  very  far, or  that  others,  better  equipped,  could  not  carry  them   further.   I  hope  they  will.  My  conscious  intention  in  writing  this  essay  was  the  elucidation   of  an  indicative  calculus,  and   its   latent   potential,  becoming  manifest  only  when  the  realization  of  this  intention  was  already  well  advanced,  took  me  by  surprise. \\
+
+I break  off  the  account  at  the  point  where,  as  we  enter  the  third   dimension   of   representation   with  equations   of   degree   higher  than  unity,  the  connexion  with  the  basic  ideas  of  the  physical  world  begins  to  come  more  strongly  into  view.  I  had  intended,   before   I  began  writing,  to   leave  it  here,  since  the  latent  forms  that  emerge  at  this,  the  fourth  departure  from  the  primary   form   (or   the  fifth   departure,   if  we  count   from   the   void) are so many and  so varied that  I could  not hope to  present  them  all,  even  cursorily,  in  one  book.\\
+
+Medawar observes\footnote{P B Medawar, Is the Scientific Paper a Fraud, The  Listener, 12th September 1963, pp 377-8.}  that  the  standard  form   of  presentation  required   of  an   ordinary   scientific   paper   represents   the   very   reverse  of  what  the  investigator  was  in  fact  doing.  In  reality,  says  Medawar,  the  hypothesis  is  first  posited,  and  becomes  the  medium  through  which  certain  otherwise  obscure  facts,   later   to  be  collected  in  support  of  it,  are  first  clearly  seen.  But  the  account  in  the  paper  is  expected  to  give  the  impression   that   such  facts  first  suggested  the  hypothesis,  irrespective  of  whether  this  impression  is truly  representative.\\
+
+In  mathematics  we  see  this  process  in  reverse.  The  mathematician, more frequently  than  he  is generally  allowed  to  admit,  proceeds  by  experiment,  inventing  and  trying  out   hypotheses   to  see  if  they  fit  the  facts  of  reasoning  and  computation  with  which  he  is  presented.  When  he  has  found  a  hypothesis  which  fits,  he  is  expected  to  publish  an  account  of  the  work  in  the  reverse  order,  so  as  to  deduce  the  facts  from  the  hypothesis. \\
+
+I   would  not   recommend   that   we  should  do   otherwise,   in   either   field.   By   all  accounts,  to   tell  the   story   backwards   is   convenient  and  saves  time.  But  to  pretend  that  the  story  was  actually  lived  backwards  can  be  extremely  mystifying.\\
+
+In view of this apparent reversal, Laing suggests\footnote{R D Laing, The politics of experience and the bird of paradise, London, 1967, pp 52 sq.}  that  what in empirical  science  are  called  data,  being  in  a  real  sense  arbi­trarily  chosen  by  the  nature  of  the  hypothesis  already  formed,  could  more  honestly  be  called  capta.   By  reverse  analogy,  the  facts  of mathematical  science, appearing at  first to  be  arbitrarily  chosen,   and   thus   capta,   are  not   really   arbitrary   at  all,   but   absolutely  determined  by the nature and  coherence  of our  being.  In  this  view  we  might  consider  the  facts  of  mathematics  to  be  the  real  data  of  experience,  for  only  these  appear  to  be,  in  the  final  analysis,  inescapable. \\
+
+Although  I  have  undertaken,  to  the  best  of  my  ability,  to  preserve, in the  text  itself, what  is thus  inescapable, and  thereby  timeless, and  otherwise  to  discard  what  is temporal,  I am  under  no  illusion  of  having  entirely  succeeded  on  either  count.  That  one  can  not,  in  such  an  undertaking,  succeed  perfectly,  seems  to  me  to  reside  in  the  manifest   imperfection   of  the  state   of   particular   existence,   in  any  form  at  all.  (Cf  Appendix  2.)  The  work   of   any   human   author   must   be  to   some   extent   idio­syncratic,  even  though  he may know his personal ego to  be but  a  fashionable  garb  to  suit  the mode  of the  present  rather  than  the  mean  of  past  and  future  in  which  his  work  will  come  to  rest.  To  this  extent,  mode  or  fashion  is  inevitable  at  the  expense  of  mean  or  meaning,  or  there  can  be  no  connexion   of  what  is  peripheral,  and  has  to  be  regarded,  with  what  is  central,  and  has  to  be  divined. \\
+
+A  major  aspect  of  the  language  of  mathematics  is  the  degree  of  its  formality.  Although  it  is  true  that  we  are  concerned,  in  mathematics,  to  provide  a  shorthand  for  what  is  actually  said,  this  is  only  half  the  story.  What  we  aim  to  do,  in  addition,  is  to  provide  a  more  general  form  in  which  the  ordinary  language  of  experience  is  seen  to  rest.  As  long  as  we  confine  ourselves  to  the  subject  at  hand,  without   extending  our  consideration   to   what  it  has  in  common  with  other  subjects,  we are  not  availing  ourselves  of  a  truly  mathematical  mode  of  presentation.  \\
+
+What  is encompassed,  in mathematics,  is a transcedence  from  a  given  state  of  vision  to  a  new,  and  hitherto  unapparent,  vision  beyond  it. When  the present  existence has ceased  to make  sense,  it  can  still  come  to  sense  again  through  the  realization  of  its  form. \\
+
+Thus   the   subject   matter   of   logic,   however    symbolically    treated,  is  not,  in  as  far  as  it  confines  itself  to  the  ground   of   logic,  a  mathematical  study.  It  becomes  so  only  when  we  are  able  to  perceive  its  ground  as  a  part  of  a  more  general  form,  in   a   process   without   end.   Its   mathematical   treatment   is   a   treatment  of  the  form  in  which  our  way  of  talking  about  our  ordinary  living  experience  can  be  seen  to  be  cradled.  It  is  the  laws of this form, rather than those of logic, that  I have  attempted  to  record. \\
+
+In  making  the  attempt,  I  found  it  easier  to  acquire  an  access  to  the  laws  themselves  than  to  determine  a  satisfactory   way   of  communicating   them.  In   general,  the  more   universal   the   law,  the  more  it  seems  to  resist  expression  in  any  particular  mode. \\
+
+Some  of  the  difficulties   apparent   in  reading,  as  well  as  in  writing, the earlier  part  of the  text come  from  the  fact  that,  from  Chapter   5  backwards,  we  are  extending  the  analysis   through   and  beyond  the  point  of  simplicity  where  language  ceases  to  act  normally  as  a  currency  for  communication.  The  point   at   which  this  break  from  normal  usage  occurs  is  in  fact  the  point  where  algebras  are  ordinarily  taken  to  begin.  To  extend  them  back  beyond  this  point  demands  a  considerable  unlearning  of  the current descriptive superstructure which, until  it is unlearned, can  be  mistaken  for  the  reality. \\
+
+The fact that, in a book, we have to use words and other symbols in an attempt to express what the use of words and other symbols has hitherto
+ obscured,  tends  to  make  demands  of  an  extraordinary  nature  on  both  writer  and  reader,  and   I   am  conscious,  on  my  side,  of  how  imperfectly   I  succeed   in   rising  to  them.  But  at  least,  in  the  process  of  undertaking  the  task,  I  have  become  aware  (as  Boole  himself  became  aware)  that  what  I  am  trying  to  say  has  nothing  to  do  with  me,  or  anyone  else,  at  the  personal  level.  It,  as  it  were,  records  itself  and,  whatever  the  faults  in  the  record,  that  which is  so  recorded  is not a matter of opinion. The only credit  I  feel entitled to  accept  in  respect  of it is for  the instrumental  labour  of making  a  record  which may, if God so disposes, be articulate and coherent  enough  to  be  understood  in  its temporal  context.
+
+London, August 1967
 
 \newpage
 \section{The form}
+We take as given the idea of distinction and the idea of indication, and that we cannot make an indication without drawing a distinction. We take, therefore, the form of distinction for the form.
+
+\begin{definition}
+Distinction is perfect continence.        
+\end{definition}
+
+That is to say, a distinction is drawn by arranging a boundary with separate sides so that a point on one side cannot reach the other side without crossing the boundary. For example, in a plane space a circle draws a distinction. Once a distinction is drawn, the spaces, states, or contents
+on each side of the boundary, being distinct, can be indicated. There can be no distinction without motive, and there can be no motive unless contents are seen to differ in value. If a content is of value, a name can be taken to indicate this value. Thus the calling of the name can be identified with the value of the content.
+
+\begin{axiom}[The law of calling]
+    The value of a call made again is the value of the call.
+\end{axiom}
+
+That is to say, if a name is called and then is called again, the value indicated by the two calls taken together is the value indicated by one of them. That is to say, for any name, to recall is to call.
+
+Equally, if the content is of value, a motive or an intention or instruction to cross the boundary into the content can be taken to indicate this value. Thus, also, the crossing of the boundary can be identified with the value of the content.
+
+\begin{axiom}[The law of crossing]
+    The value of a crossing made again is not the value of the crossing.
+\end{axiom}
+
+That is to say, if it is intended to cross a boundary and then it is intended to cross it again, the value indicated by the two intentions taken together is the value indicated by none of them. That is to say, for any boundary, to recross is not to cross.
 
 \newpage
 \section{Forms taken out of the form}
 
-\newpage
-\section{The conception of calculation}
+\pmb{Construction}
 
-\newpage
-\section{The primary arithmetic}
+Draw a distinction.
+\\\\
+\pmb{Content}
 
+Call it the first distinction.
+
+Call the space in which it is drawn the space severed or cloven by the distinction.
+
+Call the parts of the space shaped by the severance or cleft the sides of the distinction or, alternatively, the spaces, states, or contents distinguished by the distinction.
+\\\\
+\pmb{Intent}
+
+Let any mark, token, or sign be taken in any way with or with regard to the distinction as a signal.
+
+Call the use of any signal its intent.   
+\\\\
+\pmb{First canon. Convention of intention}
+
+Let the intent of a signal be limited to the use allowed to it.
+
+Call this the convention of intention. In general, \textit{what is not allowed is forbidden.}
+\\\\
+\pmb{Knowledge}
+
+Let a state distinguished by the distinction be marked with a mark
 \begin{form}
-	\Lambda = \lof{
-		\lof{
-			\lof{
-				\loflr{
-					\lof{
-						\lof{
-							\lof{
-								\loflr{\re{8}}{a}{}{1}\re{6}
-							}{2}\re{1}
-						}{3}\re{8}
-					}{4}
-				}{a}{}{5}\re{2}
-			}{6}\re{5}
-		}{7}\re{4}
-	}{8}
+    \lofc{}{}{1}
+\end{form} of distinction.
+
+Let the state be known by the mark.
+
+Call the state the marked state.
+\\\\
+\pmb{Form}
+
+Call  the  space  cloven  by  any  distinction,  together  with  the  entire  content  of  the  space,  the  form  of  the  distinction.
+
+Call  the  form  of  the  first  distinction  the  form.
+\\\\
+\pmb{Name}
+
+Let  there  be  a  form  distinct  from  the  form.  Let  the  mark  of  distinction  be  copied  out  of  the  form  into  such  another  form.
+
+Call  any  such  copy  of  the  mark  a  token  of  the  mark.
+
+Let  any token  of the mark  be  called  as  a name  of the  marked  state.
+
+Let  the  name  indicate  the  state.
+\\\\
+\pmb{Arrangement}
+
+Call  the  form  of  a  number  of  tokens  considered  with  regard  to  one  another  (that  is  to  say,  considered   in  the  same   form)   an  arrangement. 
+\\\\
+\pmb{Expression}
+
+Call  any  arrangement  intended  as an  indicator  an  expression.
+\\\\
+\pmb{Value}
+
+Call   a   state   indicated   by  an  expression  the  value   o   expression. 
+\\\\
+\pmb{Equivalence}
+
+Call  expressions  of  the same  value  equivalent.  Let  a  sign
+\begin{align*}
+    &=    
+\end{align*} of equivalence be written between equivalent expressions.
+
+Now, by axiom 1, 
+\begin{form}
+    \lofc{}{}{1}\lofc{}{}{2} = \lofc{}{}{3}
 \end{form}
+\\\\
+\pmb{Instruction}
+\\\\
+\pmb{Equation}
+\\\\
+\pmb{Primitive equation}
+\\\\
+\pmb{Simple expression}
+\\\\
+\pmb{Operation}
+\\\\
+\pmb{Relation}
+\\\\
+\pmb{Depth}
+\\\\
+\pmb{Unwritten cross}
+\\\\
+\pmb{Pervasive space}
+\\\\
 
-\begin{form}
+\section{The conception of calculation}
+\section{The primary arithmetic}
+\section{A calculus taken out of the calculus}
+\section{The primary algebra}
+\section{Theorems of the second order}
+\section{Re-uniting the two orders}
+\section{Completeness}
+\section{Independence}
+\section{Equations of the second degree}
+\section{Re-entry into the form}
+\section*{Notes }
+\section*{Appendix 1. }
+\section*{Appendix 2. }
+\section*{Index of references}
+\section*{Index of forms}
+
+\section*{Equation Samples}
+\newpage
+
+\begin{form}\tag{1.1}
 	f = \loflr{}{a}{}{1} \loflr{}{b}{\re{1}}{2}
 \end{form}
 
-\begin{form}
+\begin{form}\tag{1.2}
 	f = \loflr{}{a}{}{1} \loftext{b}{2} \re{1}
 \end{form}
 
-\begin{form}
+\begin{form}\tag{1.3}
 	f = \lofc{}{}{1}
 \end{form}
 
-\begin{form}
+\begin{form}\tag{1.4}
 	f = \lofc{}{a}{1}
 \end{form}
 
-\begin{form}
+\begin{form}\tag{1.5}
 	f = \lofc{
 		\re{1}
 		\loftext{a}{2}
@@ -109,11 +359,11 @@
 	}{c}{1}
 \end{form}
 
-\begin{form}
+\begin{form}\tag{1.6}
 	\loflr{\loflr{\loflr{\re{2}}{a}{}{1}\re{3}}{b}{}{2}}{c}{}{3}
 \end{form}
 
-\begin{form}
+\begin{form}\tag{1.7}
 	\re{3}
 	\lof{
 		\lofc{
@@ -122,7 +372,7 @@
 	}{3}
 \end{form}
 
-\begin{form}
+\begin{form}\tag{1.8}
 	\lof{
 		\re{3}
 		\loflr{}{a}{}{1}
@@ -132,7 +382,7 @@
 	\re{2}
 \end{form}
 
-\begin{form}
+\begin{form}\tag{1.9}
 	\text{ Kultur } = \lofc{\ren{Problem}{2} \lofc{\re{1}}{\text{ x }}{1}}{\text{ Medium }}{2}
 \end{form}
 
@@ -140,39 +390,6 @@ The test of inline LoF equation \begin{forminline}
 	h_6 = \lofc{\lofc{\lofc{\lofc{\lofc{\lofc{}{h_8}{1}}{h_6}{2}}{h_1}{3}}{h_8}{4}}{a}{5}}{h_2}{6}
 \end{forminline} The test two \begin{forminline}
 	f = \lofc{\lofc{\lofc{\re{2}}{a}{1}\re{3}}{b}{2}}{c}{3}
-\end{forminline} End of the test.
-
-\newpage
-\section{A calculus taken out of the calculus}
-
-\newpage
-\section{The primary algebra}
-
-\newpage
-\section{Theorems of the second order}
-
-\newpage
-\section{Re-uniting the two orders}
-
-\newpage
-\section{Completeness}
-
-\newpage
-\section{Independence}
-
-\newpage
-\section{Equations of the second degree}
-
-\newpage
-\section{Re-entry into the form}
-
-\newpage
-\section*{Notes}
-
-\newpage
-\appendix
-\section{Proofs of Sheffer's postulates}
-\section{The calculus interpreted for logic}
-
+\end{forminline} End of the test.   
 
 \end{document}
